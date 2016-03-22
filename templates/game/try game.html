@@ -1,0 +1,63 @@
+<html><head>
+<!-- <style type="text/css"> -->
+<link rel="stylesheet" type="text/css" href="style.css" />
+</style>
+
+<input type="button" value="Disband" id="Disband"  onclick="disband()"/>
+<input type="button" value="New Start" id="btn3"  onclick="newStart()"/>
+<input type="button" value="Button 1" id="btn1"  onclick="setBackground()"/>
+<script type="text/javascript" src="game.js">
+</script>
+<p class="one">
+<table>
+<tr>
+<script>
+for(var j=0;j<15;j++){
+	 document.write("<tr>") ;
+	  for(var i=0;i<15;i++){
+	    var cellnumber=j*100+i
+		document.write("<td id="+cellnumber+">") ;
+		//call the function setup(id) by click on the cell;
+//		document.write(" onclick=setup("+cellnumber+")")  ;
+//		document.write(">")  ;
+//		document.write("<img src='http://img.baidu.com/img/logo-zhidao.gif'>")  ;
+		document.write("</td>") ;
+		 
+	    }
+		document.write("</tr>") ;
+		}
+		
+//	function changeCell(id){
+//			document.getElementById(id).style.background='red';
+//		}
+	
+</script>
+</tr>
+
+</table></head>
+
+<body>
+	<p class="two">
+	Food: 
+	<br/>
+	<input id="Food" type="text" readonly value="0"></input>
+	<br/>
+	<br/>
+	Health:
+	<br/>
+	<input id="Health" type="text" readonly value="0"></input>
+	<br/>
+	<br/>
+	Day:
+	<br/>
+	<input id="Day" type="text" readonly value="0"></input>
+	<br/>
+	<br/>
+	Partners:
+	<br/>
+	<input id="Partners" type="text" readonly value="0"></input>
+	<br/>
+	</p>
+</body>
+</html>
+<!-- <td><img src='http://img.baidu.com/img/logo-zhidao.gif'></td>  -->

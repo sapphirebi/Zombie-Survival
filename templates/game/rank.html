@@ -1,0 +1,101 @@
+{% extends 'game/base.html'%}
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/rank.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+<div class="tablePos">
+	<div class="first-table">
+		<div class="table-title">
+			<h4>Score Ranking</h4>
+		</div>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Player</th>
+				<th class="text-left">Score</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover">
+			{% for mark in marks %}
+			<tr>
+				<td class="text-left">{{ mark.user.username}}</td>
+				<td class="text-left">{{ mark.mark }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="second-table">
+
+		<div class="table-title">
+			<h4>Food Ranking</h4>
+		</div>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Player</th>
+				<th class="text-left">Food</th>
+			</tr>
+			</thead>
+			{% for food in foods %}
+			<tr>
+				<td class="text-left">{{ food.user.username}}</td>
+				<td class="text-left">{{ food.mark }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="thirdly-table">
+
+		<div class="table-title">
+			<h4>Suivival Days Ranking</h4>
+		</div>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Player</th>
+				<th class="text-left">Suivival Days</th>
+			</tr>
+			</thead>
+			<tbody class="table-hover">
+			{% for time in times %}
+			<tr>
+				<td class="text-left">{{ time.user.username}}</td>
+				<td class="text-left">{{ time.mark }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	<div class="fourthly-table">
+
+		<div class="table-title">
+			<h4>Partner Ranking</h4>
+		</div>
+		<table class="table-fill">
+			<thead>
+			<tr>
+				<th class="text-left">Player</th>
+				<th class="text-left">Partner</th>
+			</tr>
+			<thead>
+			{% for person in people %}
+			<tr>
+				<td class="text-left">{{ person.user.username}}</td>
+				<td class="text-left">{{ person.mark }}</td>
+			</tr>
+			{% endfor %}
+			</tbody>
+		</table>
+	</div>
+
+
+	<div class="back">
+		<button class="button" onclick="javascript:window.location.href='/';">Go Back</button>
+	</div>
+</div>
+{% endblock %}

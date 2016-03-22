@@ -1,0 +1,66 @@
+
+{% extends 'game/base.html'%}
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/game.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+<div class="content">
+	<div class="gamepart">
+		<table class="gametable">
+			<script>
+				for(var j=0;j<15;j++){
+					document.write("<tr>") ;
+					for(var i=0;i<15;i++){
+						var cellnumber=j*100+i
+						document.write("<td  id="+cellnumber+">") ;
+						document.write("</td>") ;
+					}
+					document.write("</tr>") ;
+				}
+			</script>
+		</table>
+
+		<div class="gamebutton">
+			<button class="button" id="btn1" onclick="disband()">Load</button>
+			<button class="button" id="btn3" onclick="newStart()">New Start</button>
+			<script type="text/javascript" src="../../static/js/game.js"></script>
+		</div>
+
+			<!--<form id="save_form" method="post" action="/game/">-->
+			<!--{% csrf_token %}-->
+			<!--<div class = "inf">-->
+			<!--<input class="input" name="food"  type="hidden" readonly value="{{status.food}}"><br/><br/>-->
+
+			<!--<input class="input" name="health"  type="hidden" readonly value="{{status.health}}"><br/><br/>-->
+
+			<!--<input class="input" name="survival"  type="hidden" readonly value="{{status.survival}}"><br/><br/>-->
+
+			<!--<input class="input" name="people"  type="hidden" readonly value="{{status.people}}"><br/>-->
+			<!--</div>-->
+			<!--<button class="button" id="btn3"  onclick="setBackground()" type="submit"/>Save</button>-->
+			<!--</form>-->
+
+
+	</div>
+	<form id="info_form" method="post" action="/game/">
+		<div class = "inf">
+			<logo class="logoi">Food:</logo><br/>
+			<input class="input"  id="Food" type="text" readonly value="{{status.food}}"/><br/><br/>
+			<logo class="logoi">Health:</logo><br/>
+			<input class="input"  id="Health" type="text" readonly value="{{status.health}}"/><br/><br/>
+			<logo class="logoi">Day:</logo><br/>
+			<input class="input"  id="Day" type="text" readonly value="{{status.survival}}"/><br/><br/>
+			<logo class="logoi">Partners:</logo><br/>
+			<input class="input"  id="Partners" type="text" readonly value="{{status.people}}"/><br/><br/>
+			<logo class="logoi">1</logo><br/>
+			<input class="input" id="Energy" type="text" readonly value="0"/><br/><br/>
+			<logo class="logoi">2</logo><br/>
+			<input class="input" id="OutPut" type="text" readonly value="0">
+		</div>
+	</form>
+
+</div>
+{% endblock %}

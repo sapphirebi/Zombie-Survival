@@ -1,0 +1,35 @@
+
+{% extends 'game/base.html'%}
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/rule.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+<div class="content">
+	<p class="title">Operations Guide:</p>
+	<p>
+		keyboard control, the player can control using keyboard with “wasd”. "w" ⬆; "a" ⬅️; "s" ⬇️; "d"️️️️ ➡
+	</p>
+	<p>
+		<img class="bottom" border="0" width="90px" height="90px" src="../../static/images/player.png" />This is the player. the player can move it through keyboard control.
+	</p>
+	<p>
+		<img class="bottom" border="0" width="90px" height="90px" src="../../static/images/partner.png" />This is other survivor. They will enter the team and help the player to fight with zombies. More members are in the team, the winning percentage is greater.
+	</p>
+	<p>
+		<img class="bottom" border="0" width="90px" height="90px" src="../../static/images/zombie.png" />This is the zombie. When the player meets him, there will be a fight. The fight will reduce the health value. The member in the team will be lost based on certain possibility.
+	</p>
+	<p class="title">Interface Guide:</p>
+	<p>
+		This is the status of the player, including food, health, energy, day and partner. The initial value is 15 food, 100 health value, 100 energy, 1 day and 0 partner.
+	</p>
+	<p class="title">How to Survival?</p>
+	<p>
+		The player should get food as much as possible. Moving and entering the room or house will consume the energy of the player. The player have 100 energy values in one day. After spending 100 energies, the day will end, and the food will be consumed in accordance to the number of the members in team. So disbanding the team at the proper time is quite necessary. Fighting with zombies will reduce the health value of the player, the teammates may die in some fights.
+		Game over: if there is no enough food or the health value is below the zero, the game will end.
+
+	</p>
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+.buttonbox{
+	margin-top: 12%;
+	margin-left: 40%;
+	width: 300px;
+	/*background-color: black;*/
+}
+
+.button{
+	width:250px;
+	height:50px
+}
+

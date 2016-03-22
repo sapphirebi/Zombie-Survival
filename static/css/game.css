@@ -1,0 +1,53 @@
+.gametable{
+  background-color: black;
+  border-collapse:collapse;
+  /*height: 420px;*/
+  /*width : 800px;*/
+
+}
+td{
+  width:50px;
+  height: 28px;
+}
+tr{
+  width: 800px;
+  height: 28px;
+}
+.content{
+  position: absolute;
+  top: 25%;
+  left: 15%;
+}
+.inf{
+  position: absolute;
+  top: 0%;
+  left: 105%;
+}
+.input{
+  background-color: #848484;
+  border: 0px;
+  height: 35px;
+  width: 250px;
+  text-align: center;
+  font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.logoi{
+  font-family: "Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+  color: #fbfcff;
+  font-size: 18px;
+  text-align: center;
+}
+.output{
+  background-color: black;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 50%;
+}
+.button{
+  width: 150px;
+  height: 45px;
+  margin-left: 5%;
+}
+/* .gamebutton{  min-width: 850px;  position: relative;  left: -8%;} */

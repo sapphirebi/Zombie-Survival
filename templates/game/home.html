@@ -1,0 +1,14 @@
+{% extends 'game/base.html' %}
+
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/home.css" rel="stylesheet">
+{% endblock %}
+{% block body_block %}
+<div class="buttonbox">
+	<button class="button" onclick="javascript:window.location.href='/game/';">Start Game</button></br>
+	<button class="button" onclick="javascript:window.location.href='/rank/';">Ranking</button></br>
+	<button class="button" onclick="javascript:window.location.href='/rules/';">How to Play</button></br>
+</div>
+{% endblock %}

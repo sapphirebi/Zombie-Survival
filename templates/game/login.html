@@ -1,0 +1,27 @@
+{% extends 'game/base.html'%}
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/login.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+<div class="login">
+	<div class="title">
+		<p>Login</p>
+	</div>>
+	<form id="user_form" method="post" action="/login/">
+		{% csrf_token %}
+		<div class="u-form-group">
+			<input type="username" name="username" placeholder="Username"/>
+		</div>
+		<div class="u-form-group">
+			<input type="password" name="password" placeholder="Password"/>
+		</div>
+		<input type="submit" value="submit" />
+		<!--<div class="u-form-group">-->
+			<!--<a href="#" class="forgot-password">Forgot password?</a>-->
+		<!--</div>-->
+	</form>
+</div>
+{% endblock %}

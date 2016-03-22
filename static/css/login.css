@@ -1,0 +1,47 @@
+
+.login{
+    position:relative;
+    width: 100%;
+    height:auto;
+    margin-top: 3%;
+    text-align:center;
+}
+.title{
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-size: 25px;
+    color: #ff6d4a;
+    margin-bottom: 3%;
+}
+
+.u-form-group{
+    width:100%;
+    margin-bottom: 2%;
+}
+
+.u-form-group input[type="username"],
+.u-form-group input[type="password"]{
+    width: calc(25% - 22px);
+    height:45px;
+    outline: none;
+    border:transparent;
+    padding: 0 10px;
+    border-radius: 2px;
+    color: black;
+    background-color:white;
+    font-size:0.8rem;
+    -webkit-transition:all 0.1s linear;
+    -moz-transition:all 0.1s linear;
+    transition:all 0.1s linear;
+}
+
+.login input[type="submit"]{
+    width: calc(15%);
+    height : 45px;
+    outline: none;
+    border-radius: 8px;
+    background-color: #358efb;
+    border:transparent;
+    font-size: 15px;
+    color: white;
+
+}

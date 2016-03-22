@@ -1,0 +1,35 @@
+{% extends 'game/base.html' %}
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/register.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+
+{% if registered %}
+<meta http-equiv=refresh content="2;url=/game/">
+if 5 second still not change. please click <a href="game.html">start game</a>
+{% else %}
+<div class="register">
+<form id="user_form" method="post" action="/register/" enctype="multipart/form-data">
+    {% csrf_token %}
+    <p class="title">Register</p>
+    <div class="u-form-group">
+        <input id="id_username" maxlength="30" name="username" type="username" placeholder="Username"/>
+    </div>
+    <div class="u-form-group">
+        <input id="id_password" name="password" type="password" placeholder="Password"/>
+    </div>
+    <div class="u-form-group">
+        <input id="Conf_password" name="password" type="password" placeholder="Confirm Password"/>
+    </div>
+    <div class="u-form-group">
+        <input id="id_email" maxlength="75" name="email" type="email" placeholder="E-mail"/>
+    </div>
+    <!-- Provide a button to click to submit the form. -->
+    <input type="submit" name="submit" value="Register" />
+</form>
+    </div>
+{% endif %}
+{% endblock %}

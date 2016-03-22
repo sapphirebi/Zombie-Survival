@@ -1,0 +1,50 @@
+
+
+{% extends 'game/base.html' %}
+
+{% load staticfiles %}
+
+{% block css_block %}
+<link href="../../static/css/profile.css" rel="stylesheet">
+{% endblock %}
+
+{% block body_block %}
+<div class="content">
+    <div class="user">
+        <form class="form-horizontal">
+            <fieldset disabled>
+                <img src="../static/images/player.png" width="90px" height="90px"><br/>
+                <label>Username</label><br/>
+                <input type="text" class="form-control"  placeholder="Username">
+                <label>E-mail</label><br/>
+                <input type="email" class="form-control"  placeholder="Email">
+            </fieldset>
+        </form>
+
+    </div>
+    <div class="operate">
+
+            <form id="user_form" method="post" action="/profile/">
+                {% csrf_token %}
+                <br/>
+                <label class="hit">Please enter your older password</label><br/>
+                <div class="u-form-group">
+                    <input class="form-control"  id="old_Password" name="old_password" type="password" /><br/><br/>
+                </div>
+                <label class="hit">Please enter your new password</label><br/>
+                <div class="u-form-group">
+                    <input class="form-control"  id="change_password" name="password" type="password" /><br/><br/>
+                </div>
+                <label class="hit">Confirm password</label><br/>
+                <div class="u-form-group">
+                    <input class="form-control" id="Conf_password" name="password2" type="password" /><br/><br/>
+                </div>
+
+            <br/><br/>
+            <label class="hit">Modify your E-mail if you want to change </label><br/>
+            <input class="form-control" width="140px" id="E-mail" name="email" type="email" value="{{user.email}}"/><br/><br/>
+            <input type="submit" class="btn btn-success" name="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+{% endblock %}

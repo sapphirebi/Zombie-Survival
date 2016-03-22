@@ -1,0 +1,55 @@
+
+.title{
+	position: relative;
+	margin-left: 15%;
+	margin-top: 3%;
+	max-width: 300px;
+	text-align: left;
+	font-size: 30px;
+	color: #ff6d4a;
+}
+.img{
+	position: relative;
+	margin-left: 35%;
+	max-width: 90px;
+	max-height: 90px;
+}
+.inf{
+	position: relative;
+	margin-left: 10%;
+	width: 200px;
+	height: 150px;
+}
+.t{
+	position: relative;
+	float: left;
+	margin-left: 8%;
+	margin-top: 3%;
+	width: auto;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+#t{
+	text-align: center;
+}
+.t a{
+	color: white;
+}
+p{
+	font-size: 20px;
+}
+.content{
+	width: 80%;
+	height: auto;
+	float: left;
+	margin-left: 12%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	text-align:justify;
+	/*background-color: black;*/
+}
+.team{
+	width: 90%;
+	margin-left: 2%;
+}
