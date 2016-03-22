@@ -41,13 +41,16 @@ tr{
 }
 .output{
   background-color: black;
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 50%;
+  width: 750px;
+  border-color: transparent;
+  text-align: center;
 }
 .button{
-  width: 150px;
+  width: 200px;
   height: 45px;
   margin-left: 5%;
 }
-/* .gamebutton{  min-width: 850px;  position: relative;  left: -8%;} */
+.but{
+  width: 800px;
+  /*background-color: black;*/
+}

@@ -16,11 +16,13 @@ class UserProfile(models.Model):
 
 class Status(models.Model):
     user = models.ForeignKey(User)
-    food = models.IntegerField(default=10)
-    health = models.IntegerField(default=10)
+    food = models.IntegerField(default=15)
+    health = models.IntegerField(default=100)
     survival = models.IntegerField(default=0)
-    people = models.IntegerField(default=1)
-
+    people = models.IntegerField(default=0)
+    energy = models.IntegerField(default=100)
+    attack = models.FloatField(default=6)
+    zombie_attack = models.IntegerField(default=3)
     def __unicode__(self):      #For Python 2, use __str__ on Python 3
         return self.user.username
 

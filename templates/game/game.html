@@ -23,44 +23,43 @@
 			</script>
 		</table>
 
-		<div class="gamebutton">
-			<button class="button" id="btn1" onclick="disband()">Load</button>
-			<button class="button" id="btn3" onclick="newStart()">New Start</button>
-			<script type="text/javascript" src="../../static/js/game.js"></script>
-		</div>
-
-			<!--<form id="save_form" method="post" action="/game/">-->
-			<!--{% csrf_token %}-->
-			<!--<div class = "inf">-->
-			<!--<input class="input" name="food"  type="hidden" readonly value="{{status.food}}"><br/><br/>-->
-
-			<!--<input class="input" name="health"  type="hidden" readonly value="{{status.health}}"><br/><br/>-->
-
-			<!--<input class="input" name="survival"  type="hidden" readonly value="{{status.survival}}"><br/><br/>-->
-
-			<!--<input class="input" name="people"  type="hidden" readonly value="{{status.people}}"><br/>-->
-			<!--</div>-->
-			<!--<button class="button" id="btn3"  onclick="setBackground()" type="submit"/>Save</button>-->
-			<!--</form>-->
-
+		<script type="text/javascript" src="../../static/js/game.js"></script>
+		<input class="input"  id="Food1"  type="hidden" readonly value="{{status.food}}"/>
+		<input class="input"  id="Health1" type="hidden" readonly value="{{status.health}}"/>
+		<input class="input"  id="Day1" type="hidden" readonly value="{{status.survival}}"/>
+		<input class="input"  id="Partners1"  type="hidden" readonly value="{{status.people}}"/>
+		<input class="input" id="Energy1"  type="hidden" readonly value="{{status.energy}}"/>
+		<input class="input" id="ZombieAttack1" type="hidden" readonly value="{{status.zombie_attack}}">
+		<input class="input" id="Attack1"  type="hidden" readonly value="{{status.attack}}">
 
 	</div>
+
 	<form id="info_form" method="post" action="/game/">
+		{% csrf_token %}
 		<div class = "inf">
 			<logo class="logoi">Food:</logo><br/>
-			<input class="input"  id="Food" type="text" readonly value="{{status.food}}"/><br/><br/>
+			<input class="input"  id="Food" name="food" type="text" readonly value="{{status.food}}"/><br/><br/>
 			<logo class="logoi">Health:</logo><br/>
-			<input class="input"  id="Health" type="text" readonly value="{{status.health}}"/><br/><br/>
+			<input class="input"  id="Health" name="health" type="text" readonly value="{{status.health}}"/><br/><br/>
 			<logo class="logoi">Day:</logo><br/>
-			<input class="input"  id="Day" type="text" readonly value="{{status.survival}}"/><br/><br/>
+			<input class="input"  id="Day" name="survival" type="text" readonly value="{{status.survival}}"/><br/><br/>
 			<logo class="logoi">Partners:</logo><br/>
-			<input class="input"  id="Partners" type="text" readonly value="{{status.people}}"/><br/><br/>
-			<logo class="logoi">1</logo><br/>
-			<input class="input" id="Energy" type="text" readonly value="0"/><br/><br/>
-			<logo class="logoi">2</logo><br/>
-			<input class="input" id="OutPut" type="text" readonly value="0">
+			<input class="input"  id="Partners" name="people" type="text" readonly value="{{status.people}}"/><br/><br/>
+			<logo class="logoi">Energy</logo><br/>
+			<input class="input" id="Energy" name="energy" type="text" readonly value="{{status.energy}}"/><br/><br/>
+			<input class="input" id="ZombieAttack" name="zombie_attack" type="hidden" readonly value="{{status.zombie_attack}}">
+			<input class="input" id="Attack" name="attack" type="hidden" readonly value="{{status.attack}}">
+			<input class="input" id="Check" name="check" type="hidden" readonly value="new">
 		</div>
 	</form>
+	<input class="output" id="OutPut" name="check1" type="text" readonly value=""><br/>
+	<div class = "but">
+		<button class="button" id="btn1" onclick="loadGame()">Load</button>
+		<button class="button" id="btn3" onclick="newStart()">New Start</button>
+		<button class="button" id="btn2"  onclick="saveGame()" >Save and Quit</button>
+		<button class="button" id="btn4" onclick="disband()">Disband Partners</button>
+	</div>
+
 
 </div>
 {% endblock %}

@@ -1,3 +1,4 @@
+
 from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponse, HttpResponseRedirect
@@ -42,7 +43,7 @@ def user_login(request):
                 return HttpResponseRedirect('/game/')
             else:
                 # An inactive account was used - no logging in!
-                return HttpResponse("Your Rango account is disabled.")
+                return HttpResponse("Your account is disabled.")
         else:
             # Bad login details were provided. So we can't log the user in.
             print "Invalid login details: {0}, {1}".format(username, password)
@@ -85,13 +86,18 @@ def register(request):
                 # If the two forms are valid...
                 if user_form.is_valid():
                     # Save the user's form data to the database.
+                    confirm_password = request.POST.get('confirm_password')
+                    password = request.POST.get('password')
                     user = user_form.save()
-                    user.set_password(user.password)
-                    user.save()
-                    registered = True
-                    s = Status.objects.get_or_create(user=user)[0]
-                    s.save()
-                    return render(request, 'game/login.html')
+                    if confirm_password == password:
+                        user.set_password(user.password)
+                        user.save()
+                        registered = True
+                        s = Status.objects.get_or_create(user=user)[0]
+                        s.save()
+                        return render(request, 'game/login.html')
+                    else:
+                     return HttpResponse("Password not match!")
                 else:
                     return HttpResponse("User already exist or invalid email!")
             # Not a HTTP POST, so we render our form using two ModelForm instances.

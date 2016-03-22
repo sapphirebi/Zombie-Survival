@@ -43,7 +43,7 @@
 			{% for food in foods %}
 			<tr>
 				<td class="text-left">{{ food.user.username}}</td>
-				<td class="text-left">{{ food.mark }}</td>
+				<td class="text-left">{{ food.food }}</td>
 			</tr>
 			{% endfor %}
 			</tbody>
@@ -65,7 +65,7 @@
 			{% for time in times %}
 			<tr>
 				<td class="text-left">{{ time.user.username}}</td>
-				<td class="text-left">{{ time.mark }}</td>
+				<td class="text-left">{{ time.survival }}</td>
 			</tr>
 			{% endfor %}
 			</tbody>
@@ -86,7 +86,7 @@
 			{% for person in people %}
 			<tr>
 				<td class="text-left">{{ person.user.username}}</td>
-				<td class="text-left">{{ person.mark }}</td>
+				<td class="text-left">{{ person.people }}</td>
 			</tr>
 			{% endfor %}
 			</tbody>

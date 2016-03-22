@@ -190,6 +190,7 @@ createMap(backgroundMap);
 curMap[locationRole[0]][locationRole[1]] = 5;
 
 function newStart(){
+//alert("asdfsdf");
 	food = 15;
 	health = 100;
 	energy = 100;
@@ -203,8 +204,37 @@ function newStart(){
 	locationRole[0] = 13;
 	locationRole[1] = 7;
 	curMap[locationRole[0]][locationRole[1]] = 5;
-	
+	document.getElementById("Check").value="new";
+ 	//document.getElementById("info_form").submit();
 	setBackground()
+}
+
+function loadGame(){
+// 	alert("neow");
+food = parseInt(document.getElementById("Food1").value);
+health = parseInt(document.getElementById("Health1").value);
+energy = parseInt(document.getElementById("Energy1").value);
+attack = parseFloat(document.getElementById("Attack1").value);
+zombieAttack = parseInt(document.getElementById("ZombieAttack1").value);
+partners = parseInt(document.getElementById("Partners1").value);
+day = parseInt(document.getElementById("Day1").value);
+ 
+alert(food+" "+health+" "+energy+" "+attack+" "+zombieAttack+" "+partners+" "+day );
+	state = 0;
+	selectMap();
+	createMap(backgroundMap);
+	locationRole[0] = 13;
+	locationRole[1] = 7;
+	curMap[locationRole[0]][locationRole[1]] = 5;
+	document.getElementById("Check").value="new";
+	setBackground()
+
+}
+
+function saveGame(){
+
+document.getElementById("Check").value="save";
+ document.getElementById("info_form").submit();
 }
 
 function randomRoom(){
@@ -465,7 +495,7 @@ function enter(){
 function exit(){
 	if(state == 1){
 		document.getElementById("OutPut").value="eixt house";
-		zombieAttack++;
+		
 		locationRole = mainMapRole.slice(0);
 		state = 0;
 		createMap(backgroundMap);
@@ -914,28 +944,37 @@ function keyControl() {
 }
 
 function disband(){
-	if(partners!=0){
+ var r=confirm("Are you sure to disband your team? If so, you will lose half of the food");
+     if (r==true)
+     {
+     if(partners!=0){
 	food = Math.ceil(food/2);
 	partners = 0;
 	}
 	foodShow();
+     }
+    
+	
 }
 function foodShow() {
 	if(energy <= 0){
 		day++;
+		zombieAttack++;
 		energy = 100;
 		food = food - 3 - partners;
 		document.getElementById("OutPut").value="the day after,eat "+3+partners+"foods";
 	}
 	if(food <= 0 || health <= 0){
 //		document.getElementById("btn3").onclick();
-//		document.getElementById("form").submit();
+
 		if(health <= 0){
 			health = 0;
 		}
 		else{
 			food = 0;
 		}
+		document.getElementById("Check").value="new";
+		document.getElementById("info_form").submit();
 		state = 4;
 	}
 	
@@ -944,4 +983,6 @@ function foodShow() {
 	document.getElementById("Day").value=day;
 	document.getElementById("Partners").value=partners;
 	document.getElementById("Energy").value=energy;
+	document.getElementById("Attack").value=attack;
+	document.getElementById("ZombieAttack").value=zombieAttack;
 }
