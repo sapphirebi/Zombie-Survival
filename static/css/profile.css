@@ -1,31 +1,22 @@
 .user{
     float: left;
     margin-left: 20%;
-    margin-bottom: 5%;
-
-    height: 700px;
-
-    padding: 5%;
+    margin-bottom: 2%;
+    height: 500px;
+    padding: 2%;
 }
 .operate{
     float: right;
-    height: 700px;
+    height: 500px;
     margin-right: 20%;
-    margin-bottom: 5%;
-
-    padding: 5%;
+    margin-bottom: 2%;
+    padding: 2%;
 	/*width: 80%;*/
 
 }
-label{
-    float: left;
+.hit{
+    text-align: left;
 }
 .hit{
     text-align: center;
-}
-
-.content{
-
-    margin-top: 5%;
-    /*margin-bottom: 5%;*/
 }

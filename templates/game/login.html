@@ -9,7 +9,7 @@
 <div class="login">
 	<div class="title">
 		<p>Login</p>
-	</div>>
+	</div>
 	<form id="user_form" method="post" action="/login/">
 		{% csrf_token %}
 		<div class="u-form-group">
@@ -19,9 +19,6 @@
 			<input type="password" name="password" placeholder="Password"/>
 		</div>
 		<input type="submit" value="submit" />
-		<!--<div class="u-form-group">-->
-			<!--<a href="#" class="forgot-password">Forgot password?</a>-->
-		<!--</div>-->
 	</form>
 </div>
 {% endblock %}

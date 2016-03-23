@@ -962,7 +962,8 @@ function foodShow() {
 		zombieAttack++;
 		energy = 100;
 		food = food - 3 - partners;
-		document.getElementById("OutPut").value="the day after,eat "+3+partners+"foods";
+		var lossFood = 3 + partners;
+		document.getElementById("OutPut").value="the day after,eat "+lossFood+" foods";
 	}
 	if(food <= 0 || health <= 0){
 //		document.getElementById("btn3").onclick();
@@ -973,9 +974,11 @@ function foodShow() {
 		else{
 			food = 0;
 		}
+		alert("You Die!");
 		document.getElementById("Check").value="new";
 		document.getElementById("info_form").submit();
 		state = 4;
+		
 	}
 	
 	document.getElementById("Food").value=food;
