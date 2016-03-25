@@ -1,9 +1,11 @@
+.content{
+  margin-top: 3%;
+}
 .gametable{
   background-color: black;
   border-collapse:collapse;
-  margin-left: 3%;
-  /*height: 420px;*/
-  width : 750px;
+  float: left;
+  margin-left: 15%;
 
 }
 td{
@@ -14,14 +16,8 @@ tr{
   width: 800px;
   height: 28px;
 }
-.content{
-  position: absolute;
-  top: 25%;
-  left: 15%;
-}
 .inf{
- position: absolute;
-  top: 0%;left: 130%;
+
 }
 .input{
   background-color: #848484;
@@ -40,29 +36,24 @@ tr{
   text-align: center;
 }
 .output{
+  float: left;
+  margin-left: 15%;
   background-color: black;
   width: 750px;
-  margin-left: 3%;
   border-color: transparent;
   text-align: center;
 }
 .button{
   width: 200px;
   height: 45px;
-
-  /*margin-left: 5%;*/
 }
 .but{
-  position: relative;
-  height: 100px;
-  width: 80%;
-  margin-top: 30%;
-  margin-left: 7%;
-
-
+  float: left;
+  margin-left: 12%;
+  width: 85%;
 }
 #btn4{
   background-color: #358efb;
-  margin-left: 15%;
+  margin-left: 12%;
 }
 

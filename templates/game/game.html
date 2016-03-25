@@ -47,7 +47,6 @@
 			<input class="input"  id="Partners" name="people" type="text" readonly value="{{status.people}}"/><br/><br/>
 			<logo class="logoi">Energy</logo><br/>
 			<input class="input" id="Energy" name="energy" type="text" readonly value="{{status.energy}}"/><br/><br/>
-
 			<input class="input" id="ZombieAttack" name="zombie_attack" type="hidden" readonly value="{{status.zombie_attack}}">
 			<input class="input" id="Attack" name="attack" type="hidden" readonly value="{{status.attack}}">
 			<input class="input" id="Check" name="check" type="hidden" readonly value="new">
@@ -55,16 +54,14 @@
 	</form>
 	<input class="output" id="OutPut" name="check1" type="text" readonly value=""><br/>
 	<input class="output"type="text" readonly value="'w'-up          'a'-left           's'-down          'd'-right"><br/>
-</div>
+
 	<div class = "but">
 		<button class="button" id="btn1" onclick="loadGame()">Load</button>
 		<button class="button" id="btn3" onclick="newStart()">New Game</button>
 		<button class="button" id="btn2"  onclick="saveGame()" >Save and Quit</button>
 		<button class="button" id="btn4" onclick="disband()">Disband Partners</button>
-
-
 	</div>
 
-
+</div>
 
 {% endblock %}

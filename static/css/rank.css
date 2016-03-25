@@ -1,10 +1,4 @@
-body{
-	background-image: url(../../static/images/background.jpg);
-	background-repeat:no-repeat;
-	background-size: cover;
-	background-position:center;
-	background-attachment:fixed;
-}
+
 
 div.table-title {
 	display: block;
@@ -14,16 +8,10 @@ div.table-title {
 	font-size: 20px;
 	color: white;
 	width: 100%;
-	/*background-color: black;*/
 }
-.first-table{
-	position:absolute;
+.ranktable{
 	float: left;
-	/*background-color: black;*/
-	margin-left: 30%;
-	margin-top: 3%;
 }
-
 
 .table-title h4 {
 	color: #ff6d4a;
@@ -31,7 +19,7 @@ div.table-title {
 	width: 400px;
 	margin-left: -100%;
 	margin-top: 5%;
-	margin-bottom: 20%;
+	margin-bottom: 15%;
 	font-style:normal;
 	font-family: "Roboto", helvetica, arial, sans-serif;
 	text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
@@ -135,9 +123,8 @@ th.text-left {
 td.text-left {
 	text-align: left;
 }
-.back{
-	position: absolute;
-	width: 800px;
-	margin-top: 30%;
-	margin-left: 30%;
+.tablePos{
+	margin-left: 20%;
+	margin-top: 3%;
+	margin-bottom: 3%;
 }
